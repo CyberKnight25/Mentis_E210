@@ -3,3 +3,4 @@ google-generativeai
 pandas
 fpdf
 Pillow
+python-dotenv
