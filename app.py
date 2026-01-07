@@ -13,8 +13,8 @@ from PIL import Image
 st.set_page_config(page_title="Safe-Ed Platform", page_icon="🏫", layout="wide")
 
 # HARDCODED KEY (Keep this safe!)
-API_KEY = "AIzaSyC1ailQ51XjxSCvJ5TZvsrTrxM8n16cedE"
-genai.configure(api_key=API_KEY)
+
+genai.configure(api_key=st.secrets["GOOGLE_API_KEY"])
 
 MODEL_NAME = 'models/gemini-2.5-flash-lite'
 
