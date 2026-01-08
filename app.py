@@ -368,12 +368,12 @@ else:
             else:
                 if st.button("Generate Map"):
                     with st.spinner("Mapping..."):
-                        graph_prompt = f"Source: {st.session_state['file_content'][:6000]}\nTask: Create a CLEAN hierarchical concept map (Top 15 concepts). Format: Graphviz DOT. Layout: rankdir=TB, splines=ortho. Return ONLY DOT code inside ```dot ... ```."
+                        graph_prompt = f"Source: {st.session_state['file_content'][:3000]}\nTask: Create a CLEAN hierarchical concept map (Top 15 concepts). Format: Graphviz DOT. Layout: rankdir=TB, splines=ortho. Return ONLY DOT code inside ```dot ... ```."
                         graph_res = ask_ai(graph_prompt)
                         dot_code = clean_ai_response(graph_res) # FIX: Use Cleaner
                         if "digraph" not in dot_code: dot_code = f"digraph G {{ {dot_code} }}"
                         st.session_state['map_dot'] = dot_code
-                        st.session_state['map_sum'] = ask_ai(f"Summarize this text as smart notes:\n{st.session_state['file_content'][:6000]}")
+                        st.session_state['map_sum'] = ask_ai(f"Summarize this text as smart notes:\n{st.session_state['file_content'][:3000]}")
 
             if 'map_dot' in st.session_state:
                 st.subheader("🕸️ Concept Map")
@@ -442,12 +442,12 @@ else:
             else:
                 if st.button("Generate Map"):
                     with st.spinner("Mapping..."):
-                        graph_prompt = f"Source: {st.session_state['file_content'][:6000]}\nTask: Create a CLEAN hierarchical concept map (Top 15 concepts). Format: Graphviz DOT. Layout: rankdir=TB, splines=ortho. Return ONLY DOT code inside ```dot ... ```."
+                        graph_prompt = f"Source: {st.session_state['file_content'][:3000]}\nTask: Create a CLEAN hierarchical concept map (Top 15 concepts). Format: Graphviz DOT. Layout: rankdir=TB, splines=ortho. Return ONLY DOT code inside ```dot ... ```."
                         graph_res = ask_ai(graph_prompt)
                         dot_code = clean_ai_response(graph_res) # FIX: Use Cleaner
                         if "digraph" not in dot_code: dot_code = f"digraph G {{ {dot_code} }}"
                         st.session_state['map_dot'] = dot_code
-                        st.session_state['map_sum'] = ask_ai(f"Summarize this text as smart notes:\n{st.session_state['file_content'][:6000]}")
+                        st.session_state['map_sum'] = ask_ai(f"Summarize this text as smart notes:\n{st.session_state['file_content'][:3000]}")
 
             if 'map_dot' in st.session_state:
                 st.subheader("🕸️ Concept Map")
