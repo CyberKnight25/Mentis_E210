@@ -25,3 +25,7 @@ Safe-Ed is an all-in-one educational platform designed to bridge the gap between
 - **Image Processing:** Pillow (For Multimodal AI Vision)
 - **Security:** SHA-256 Password Hashing
 
+
+## Added features
+1.10 - PDF downloadable
+
