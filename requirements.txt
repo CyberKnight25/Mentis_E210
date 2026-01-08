@@ -1,7 +1,10 @@
 streamlit
 google-generativeai
 pandas
-fpdf
-Pillow
 python-dotenv
 bcrypt
+fpdf
+PyPDF2
+Pillow
+manim
+graphviz
