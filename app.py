@@ -45,7 +45,7 @@ genai.configure(api_key=API_KEY)
 
 # USE THE FLASH MODEL (Supports Images + Text)
 # FIX: Changed to reliable 2.0-flash-exp (3-preview often errors)
-MODEL = 'gemini-3-flash-preview' 
+MODEL = 'gemini-2.5-flash' 
 DB = "school.db"
 
 # ==========================================
